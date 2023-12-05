@@ -2,58 +2,14 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import {image} from "../constants/index"
+import {image,home,courses,events,shop,pages,blogs} from "../constants/index"
 import { TopBar } from './topbar'
 
 
-const home = [
-  { name: 'Home 01', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Home 02', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Home 03', description: 'Your customers data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Home 04', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-]
-const courses = [
-  { name: 'Course Layout', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Course Category', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-]
-const events = [
-  { name: 'All Events', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Events Details', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'All Speaker', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Speaker Details', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-]
-const shop = [
-  { name: 'Shop', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Shop Details', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Cart', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Checkout', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-]
-const pages = [
-  { name: 'Elements', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'About', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Instructor', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Instructor Profile', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Zoom Meeting', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Zoom Live Lesson', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Pricing Table', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'FAQ Page', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: '404 Page', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon }
-]
-const blogs = [
-  { name: 'Blog Grid', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Blog List', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Post Standard', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Post Gallery', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Post Video', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
 
-]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -66,7 +22,7 @@ export const SearchBar = () => {
   const { logo } = image;
 
   return (
-    <header className="bg-white">
+    <header className='bg-cream'>
       <TopBar/>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:hidden">
@@ -102,15 +58,11 @@ export const SearchBar = () => {
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
-                      </div>
                       <div className="flex-auto">
                         <a href={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -143,15 +95,11 @@ export const SearchBar = () => {
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
-                      </div>
                       <div className="flex-auto">
                         <a href={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -184,15 +132,11 @@ export const SearchBar = () => {
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
-                      </div>
                       <div className="flex-auto">
                         <a href={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -225,15 +169,11 @@ export const SearchBar = () => {
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
-                      </div>
                       <div className="flex-auto">
                         <a href={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -266,15 +206,11 @@ export const SearchBar = () => {
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
-                      </div>
                       <div className="flex-auto">
                         <a href={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -307,15 +243,12 @@ export const SearchBar = () => {
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
-                      </div>
                       <div className="flex-auto">
                         <a href={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
+
                       </div>
                     </div>
                   ))}
