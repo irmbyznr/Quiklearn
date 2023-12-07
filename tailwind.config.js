@@ -23,7 +23,12 @@ export default {
         blue:"#89DAFD",
         orange:"#FF9D95",
         lightgreen:"#98DF76",
-        lightpurple:"#B1A8FF"
+        lightpurple:"#B1A8FF",
+        tabs: "#9D9CAE",
+        videocover:"#21123F",
+        banner:"#110E19",
+        plant:"#543EE81A",
+
 
 
 

@@ -11,7 +11,7 @@ export const TopClassCourses = () => {
   } = info;
   return (
     <div className="bg-cream">
-      <div className="mx-auto flex flex-col  max-w-7xl items-center justify-between p-6 lg:px-8l">
+      <div className="mx-auto container flex flex-col items-center justify-between p-6 ">
         <div className="flex flex-col justify-center items-center">
           <p className="text-sm text-grey pb-5 pt-24">{classCoursesTitle1}</p>
           <h2 className="text-purple text-4xl font-semibold">{classCoursesTitle2}</h2>

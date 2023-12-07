@@ -1,24 +1,35 @@
-import { coursesCard } from '../constants'
+import { coursesCard } from "../constants";
+import "./top-courses.css"
 
 export const TopCoursesCard = () => {
+
   return (
-    <div className="grid grid-cols-4 gap-20 pt-20">
-       {
-        coursesCard.map((course,index) =>(
-
-                <div  key={index} className="flex flex-row items-center justify-center gap-6 border bg-card rounded-md px-21 py-10">
-
-            <span className={` text-3xl flex items-center justify-center border-2 border-solid ${course.border} rounded-full bg-transparent h-16 w-16 text-white `}
-              style={{ backgroundImage: `${course.background}`, boxShadow: "0 4px 20px #d0d0d0", transition: "all .41s ease-in-out "}}
-             >{<span><course.icon/></span> }</span>
-            <span>
-            <p className='text-xl text-purple'>{course.title}</p>
-            <p className='text-base text-grey'>{course.quantity}</p>
-            </span>
-           </div>
-           
-        ))
-       }
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20 pt-20">
+      {coursesCard.map((course, index) => (
+        <div
+          key={index}
+          className="group top-courses bg-no-repeat bg-right-bottom flex flex-row items-center justify-center gap-6 border bg-card hover:bg-purple transition hover:transition-all hover:ease-in-out hover:duration-700 rounded-md pt-10 pb-10 ps-5 pe-5 "
+        >
+          <div
+            className={`text-3xl flex items-center justify-center border-2 border-solid ${course.border} rounded-full bg-transparent h-16 w-16 text-white p-9`}
+            style={{
+              backgroundImage: `${course.background}`,
+              boxShadow: "0 4px 20px #d0d0d0",
+              transition: "all .41s ease-in-out ",
+            }}
+          >
+            {
+              <span>
+                <course.icon />
+              </span>
+            }
+          </div>
+          <div className="flex flex-col">
+            <p className="text-xl text-purple">{course.title}</p>
+            <p className="text-base text-grey ">{course.quantity}</p>
+          </div>
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};

@@ -8,15 +8,9 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import {image,home,courses,events,shop,pages,blogs} from "../constants/index"
 import { TopBar } from './topbar'
 
-
-
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
-
-
 export const SearchBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { logo } = image;

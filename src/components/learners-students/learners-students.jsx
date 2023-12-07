@@ -1,25 +1,26 @@
 import {image,info} from "../constants/index"
-import { Button } from "../helpers/button"
+import { CustomButton } from "../helpers/custom-button"
 
 const LearnersStudents = () => {
     const {girlPhoto,underline}=image
     const {learnersStudentsTitle1,learnersStudentsTitle2,learnersStudentsDesc}=info
   return (
     <div className="bg-cream">
-    <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8l">
-
-     <div>
+    <div className="mx-auto container mx-auto flex flex-col lg:flex-row items-center justify-center p-6">
+     <div className="w-full">
             <img src={girlPhoto} alt="" />
         </div>
         <div className="flex flex-col gap-6">
-            <p className="text-sm text-grey">{learnersStudentsTitle1}</p>
+            <p className="text-sm text-grey pt-8">{learnersStudentsTitle1}</p>
             <div>
-            <h2 className="text-4xl text-purple font-semibold">{learnersStudentsTitle2}</h2>
-            <img src={underline} alt="" />
+            <h2 className="text-4xl text-purple font-semibold relative">{learnersStudentsTitle2}
+            <img src={underline} alt="" className="absolute "/>
+            
+            </h2>
                   </div>
             <p className="text-base text-grey">{learnersStudentsDesc}</p>
             <div>
-            <Button/>
+                <CustomButton title="Explore All Courses"/>
 
             </div>
         </div>

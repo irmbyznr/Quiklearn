@@ -1,0 +1,27 @@
+import React from 'react'
+
+import {info,image} from "../constants/index"
+import { BlogSectionSlider } from './blog-section-slider'
+
+export const BlogSection = () => {
+    const {blogTitle1,blogTitle2,blogDesc}=info
+    const {underline}=image
+  return (
+    <div className='bg-cream'>
+      <div className='container mx-auto px-32 sm:px-0'>
+      <div className='flex flex-col items-center justify-center'>
+            <p className='text-sm text-grey p-2'>{blogTitle1}</p>
+            <div>
+                <h2 className='text-purple text-4xl font-semibold p-2 relative pb-6'>{blogTitle2}
+                <img src={underline} alt="" className='absolute right-44' />
+                
+                </h2>
+            </div>
+            <p className='text-grey tex-base'>{blogDesc}</p>
+        </div>
+<BlogSectionSlider/>
+      </div>
+        
+    </div>
+  )
+}
