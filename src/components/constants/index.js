@@ -20,6 +20,12 @@ export const image = {
   wave: "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/08/hero-shape-3.svg",
   star: "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/08/hero-shape-2.svg",
   book: "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/08/hero-shape-1.svg",
+  redCrown:
+    "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/08/shape2.svg",
+  purpleCrown:
+    "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/08/shape3.svg",
+  halfCricle:
+    "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/08/shape1.svg",
   dots: "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/themes/quiklearn/assets/element/course-cat-1.svg",
   greyWave:
     "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/themes/quiklearn/assets/element/course-cat.svg",
@@ -36,6 +42,8 @@ export const image = {
   graduation:
     "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/08/call-action-img1.png",
   banner:
+    "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/08/banner-shape1.svg",
+  bannerShape:
     "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/08/banner-shape1.svg",
   beinstractor:
     "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/08/become-instructor.png",
@@ -83,10 +91,10 @@ export const info = {
   beInstractorTitle2: "Let's Join Us & Spread Your Knowledge",
   beInstractorDesc:
     "When An Unknown Printer Took A Galley Offer Area Type And Scrambled To Make A Type Specimen Bookan Unknown Printer Took Alley Ffer Area Typey And Scrambled To Make A Type Specimen Book Hass",
-    blogTitle1:"TOP ARTICLES",
-    blogTitle2:"Want To Learn More? Read Blog",
-    blogDesc:"When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book It Has Survived Not Only Five Centuries",
-
+  blogTitle1: "TOP ARTICLES",
+  blogTitle2: "Want To Learn More? Read Blog",
+  blogDesc:
+    "When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book It Has Survived Not Only Five Centuries",
 };
 export const informations = [
   {
@@ -172,8 +180,7 @@ export const coursesCard = [
 export const contact = {
   phone: "+1212-226-3126",
   mapUrl: "https://maps.app.goo.gl/H4pa8u1oWw6HkHUe6",
-  address:"463 7th Ave, NY 10018, USA"
-
+  address: "463 7th Ave, NY 10018, USA",
 };
 
 export const categories = [
@@ -186,45 +193,49 @@ export const categories = [
   { name: "Health & Fitness" },
   { name: "Technology" },
 ];
+export const menus = [
+  {
+    name: "Home",
+    items: ["Home 01", "Home 02", "Home 03", "Home 04"],
+  },
+  {
+    name: "Courses",
+    items: ["Course Layout", "Course Category"],
+  },
+  {
+    name: "Events",
+    items: ["All Events", "Events Details", "All Speaker", "Speaker Details"],
+  },
+  {
+    name: "Shop",
+    items: ["Shop", "Shop Details", "Cart", "Checkout"],
+  },
+  {
+    name: "Pages",
+    items: [
+      "Elements",
+      "About",
+      "Instructor",
+      "Instructor Profile",
+      "Zoom Meeting",
+      "Zoom Live Lesson",
+      "Pricing Table",
+      "FAQ Page",
+      "404 Page",
+    ],
+  },
+  {
+    name: "Blogs",
+    items: [
+      "Blog Grid",
+      "Blog List",
+      "Post Standard",
+      "Post Gallery",
+      "Post Video",
+    ],
+  },
+];
 
-export const home = [
-  { name: "Home 01" },
-  { name: "Home 02" },
-  { name: "Home 03" },
-  { name: "Home 04" },
-];
-export const courses = [{ name: "Course Layout" }, { name: "Course Category" }];
-export const events = [
-  { name: "All Events" },
-  { name: "Events Details" },
-  { name: "All Speaker" },
-  { name: "Speaker Details" },
-];
-export const shop = [
-  { name: "Shop" },
-  { name: "Shop Details" },
-  { name: "Cart" },
-  { name: "Checkout" },
-];
-export const pages = [
-  { name: "Elements" },
-  { name: "About" },
-  { name: "Instructor" },
-  { name: "Instructor Profile" },
-  { name: "Zoom Meeting" },
-  { name: "Zoom Live Lesson" },
-  { name: "Pricing Table" },
-  { name: "FAQ Page" },
-  { name: "404 Page" },
-];
-
-export const blogs = [
-  { name: "Blog Grid" },
-  { name: "Blog List" },
-  { name: "Post Standard" },
-  { name: "Post Gallery" },
-  { name: "Post Video" },
-];
 export const featured = [
   {
     title: "The Complete Android Development Course",
@@ -241,7 +252,7 @@ export const featured = [
     image:
       "https://www.radiustheme.com/demo/wordpress/themes/quiklearn/wp-content/uploads/2023/07/crs_img_2-380x277.jpg",
     price: "$75.00",
-    discount:"$55.00",
+    discount: "$55.00",
     star: 4,
     topDesc: "Technology",
     students: 11,
@@ -469,43 +480,43 @@ export const logobanner = [
   },
 ];
 
-export const resources=[
+export const resources = [
   {
-    label:"About"
+    label: "About",
   },
   {
-    label:"Contact"
+    label: "Contact",
   },
   {
-    label:"Refund"
+    label: "Refund",
   },
   {
-    label:"Help Center"
+    label: "Help Center",
   },
   {
-    label:"Returns Policy"
+    label: "Returns Policy",
   },
   {
-    label:"Term Conditions"
-  }
-]
-export const footercourses=[
+    label: "Term Conditions",
+  },
+];
+export const footercourses = [
   {
-    label:"Life Coach"
+    label: "Life Coach",
   },
   {
-    label:"Business Coach"
+    label: "Business Coach",
   },
   {
-    label:"Health Coach"
+    label: "Health Coach",
   },
   {
-    label:"Development"
+    label: "Development",
   },
   {
-    label:"Web Design"
+    label: "Web Design",
   },
   {
-    label:"SEO Optimize"
-  }
-]
+    label: "SEO Optimize",
+  },
+];

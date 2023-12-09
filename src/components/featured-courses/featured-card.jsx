@@ -4,6 +4,8 @@ import { BsPerson } from "react-icons/bs";
 import { PiNotebookThin } from "react-icons/pi";
 import { info, image } from "../constants/index";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
 import "./featured-card.css";
 
 export const FeaturedCourses = () => {
@@ -18,6 +20,27 @@ export const FeaturedCourses = () => {
   const filteredFeatured = selectedCategory
     ? featured.filter((item) => item.topDesc === selectedCategory)
     : featured;
+ 
+
+    const container = {
+      hidden: { opacity: 1, scale: 0 },
+      visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+          delayChildren: 0.3,
+          staggerChildren: 0.2
+        }
+      }
+    }
+      
+    const item = {
+      hidden: { y: 20, opacity: 0 },
+      visible: {
+        y: 0,
+        opacity: 1
+      }
+    }
   return (
     <div className="bg-cream">
       <div className="mx-auto container px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
@@ -83,69 +106,75 @@ export const FeaturedCourses = () => {
           </div>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {filteredFeatured.map((item, index) => (
-            <div
+        <motion.ul className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 container"  
+        variants={container}
+    initial="hidden"
+    animate="visible">
+          {filteredFeatured.map((featured, index) => (
+            <motion.li
               key={index}
-              className="group relative bg-white border-border border rounded-lg"
+              className="group relative bg-white border-border border rounded-lg item"
+              variants={item}
             >
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-t-md lg:aspect-none">
                 <figure className="relative cursor-pointer">
                   <img
-                    src={item.image}
+                    src={featured.image}
                     alt="featured-courses"
-                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                    className="h-full w-full object-cover object-center lg:h-full lg:w-full "
                   />
                   <figcaption className="absolute  top-3 left-3 bg-white text-grey text-sm rounded py-1 px-2">
-                    <p>{item.topDesc}</p>
+                    <p>{featured.topDesc}</p>
                   </figcaption>
                 </figure>
               </div>
-              <div className="mt-3 mb-3 flex justify-between">
+              <div className="mt-3 mb-3 flex justify-between px-5 pb-5 pt-3">
                 <div>
                   <div className="flex mb-3 gap-3">
                     <p className="mt-1 text-sm text-grey flex items-center">
                       <span className="text-md">
                         <BsPerson />
                       </span>
-                      {item.students} Student
+                      {featured.students} Student
                     </p>
 
                     <p className="mt-1 text-sm text-grey flex items-center">
                       <span className="text-md">
                         <PiNotebookThin />
                       </span>
-                      {item.lessons} Lessons
+                      {featured.lessons} Lessons
                     </p>
                   </div>
 
                   <h3 className="text-xl font-semibold text-gray-700 mb-3">
                     <a href="">
                       <span aria-hidden="true" className="absolute inset-0" />
-                      {item.title}
+                      {featured.title}
                     </a>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">{item.name}</p>
+                  <p className="mt-1 text-sm text-gray-500">{featured.name}</p>
                   <div className="flex justify-between items-center">
                     <Rating
                       name="simple-controlled"
-                      value={item.star}
+                      value={featured.star}
                     />
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-col lg:flex-row items-center gap-2">
                     <strike>
-                      {item.discount}
+                      {featured.discount}
                     </strike>
                     <p className="text-xl font-semibold text-gray-900">
-                      {item.price}
+                      {featured.price}
                     </p>
                     </div>
                    
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.li>
           ))}
-        </div>
+
+
+        </motion.ul>
       </div>
     </div>
   );

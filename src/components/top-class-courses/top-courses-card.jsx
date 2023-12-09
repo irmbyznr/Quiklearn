@@ -1,6 +1,5 @@
 import { coursesCard } from "../constants";
 import "./top-courses.css"
-
 export const TopCoursesCard = () => {
 
   return (
@@ -8,7 +7,7 @@ export const TopCoursesCard = () => {
       {coursesCard.map((course, index) => (
         <div
           key={index}
-          className="group top-courses bg-no-repeat bg-right-bottom flex flex-row items-center justify-center gap-6 border bg-card hover:bg-purple transition hover:transition-all hover:ease-in-out hover:duration-700 rounded-md pt-10 pb-10 ps-5 pe-5 "
+          className="hover:bg-purple group top-courses bg-no-repeat bg-right-bottom flex flex-row items-center justify-start gap-6 border bg-card hover:bg-purple rounded-md pt-10 pb-10 ps-5 pe-5 "
         >
           <div
             className={`text-3xl flex items-center justify-center border-2 border-solid ${course.border} rounded-full bg-transparent h-16 w-16 text-white p-9`}

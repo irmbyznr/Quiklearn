@@ -6,12 +6,13 @@ import { BsTwitter,BsDot } from "react-icons/bs";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { BiLogoPinterestAlt } from "react-icons/bi";
 import { PiInstagramLogo } from "react-icons/pi";
+import { ScrollToTop } from "../helpers/scroll-to-top.jsx";
 
 export const Footer = () => {
   const { phone, mapUrl,address } = contact;
   return (
     <>
-      <div className="bg-white text-center grid lg:grid-cols-4 md:grid-cols-2 md:text-start my-20 container mx-auto">
+      <div className="bg-white text-center grid lg:grid-cols-4 md:grid-cols-2 md:text-start my-20 container mx-auto ">
         <div>
           <ul className="text-grey flex flex-col gap-3 leading-7">
             <li className="text-purple font-semibold text-xl pb-3">
@@ -101,11 +102,11 @@ export const Footer = () => {
                 type="text"
                 name="email"
                 id="email"
-                className="block w-full rounded-lg border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6"
+                className="block w-full rounded-lg border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6 mx-3 sm:mx-0"
                 placeholder="Your Email Address"
               />
               <div className="absolute inset-y-0 right-2 flex items-center">
-                <button className="flex gap-2 px-3 py-2 items-center bg-buttonColor rounded-lg text-white text-lg hover:bg-purple">
+                <button className="hover:bg-purple hover:text-white flex gap-2 px-3 py-2 items-center bg-buttonColor rounded-lg text-white text-lg hover:bg-purple mx-3 sm:mx-0">
                   Sign Up
                 </button>
               </div>
@@ -113,14 +114,18 @@ export const Footer = () => {
             <li>We Only Send Interesting And Relevant Emails.</li>
           </ul>
         </div>
+
       </div>
-      <div className="lg:flex lg:justify-between  bg-cream container mx-auto py-5 text-grey text-center text-sm">
+      <div className="lg:flex lg:justify-around  bg-cream pt-8 pb-5 text-grey text-center text-sm relative">
         <p>© 2023 quiklearn. All Rights Reserved by RadiusTheme</p>
         <div className="flex items-center justify-center gap-3">
           <span>Privacy Policy</span>
          <BsDot />
           <span>Term Conditions</span>
         </div>
+      <ScrollToTop/>
+
+
       </div>
     </>
   );

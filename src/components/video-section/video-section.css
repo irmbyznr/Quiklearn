@@ -5,3 +5,13 @@
 .video-cover{
         background-image: url("../../assets/image/empty.svg");
 }
+
+
+.video-section .MuiTab-root[aria-selected="false"] {
+    color: #9D9CAE !important;
+  }
+
+.video-section .MuiTab-root[aria-selected="true"] {
+    color: white !important;
+  }
+

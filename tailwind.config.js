@@ -28,6 +28,7 @@ export default {
         videocover:"#21123F",
         banner:"#110E19",
         plant:"#543EE81A",
+        lightyellow:"#ffcd1f"
 
 
 

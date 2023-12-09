@@ -1,0 +1,10 @@
+.css-fvc8ir-MuiBadge-badge{
+    background-color: #ffcd1f;
+}
+.hover-animation:hover svg{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}

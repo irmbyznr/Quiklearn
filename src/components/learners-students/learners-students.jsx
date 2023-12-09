@@ -2,13 +2,14 @@ import {image,info} from "../constants/index"
 import { CustomButton } from "../helpers/custom-button"
 
 const LearnersStudents = () => {
-    const {girlPhoto,underline}=image
+    const {girlPhoto,underline,redCrown}=image
     const {learnersStudentsTitle1,learnersStudentsTitle2,learnersStudentsDesc}=info
   return (
     <div className="bg-cream">
     <div className="mx-auto container mx-auto flex flex-col lg:flex-row items-center justify-center p-6">
-     <div className="w-full">
+     <div className="w-full relative">
             <img src={girlPhoto} alt="" />
+            <img src={redCrown} alt="" className="absolute top-6 left-32 hidden md:flex" />
         </div>
         <div className="flex flex-col gap-6">
             <p className="text-sm text-grey pt-8">{learnersStudentsTitle1}</p>
@@ -17,6 +18,7 @@ const LearnersStudents = () => {
             <img src={underline} alt="" className="absolute "/>
             
             </h2>
+
                   </div>
             <p className="text-base text-grey">{learnersStudentsDesc}</p>
             <div>

@@ -22,7 +22,8 @@ export const InstructorsSection = () => {
           </div>
 
           {instructors.map((item, index) => (
-            <div key={index} className="flex bg-card border rounded-2xl w-auto">
+            <div key={index} className="flex bg-card border rounded-2xl w-auto"
+            >
               <div className="pt-10 w-52">
                 <img src={item.image} alt="" />
               </div>

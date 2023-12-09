@@ -34,8 +34,8 @@ export const BlogSectionSlider = () => {
        {blogcard.map((item, index) => (
          <SwiperSlide key={index}>
            <div className="flex flex-col items-center gap-3 bg-white border border-border rounded-lg pb-10">
-             <figure>
-               <img src={item.image} alt="" className="rounded-t-lg"/>
+             <figure className="overflow-hidden">
+               <img src={item.image} alt="" className="rounded-t-lg hover:transform hover:scale-105 transition-transform duration-300 ease-in-out"/>
              </figure>
              <div className="flex flex-col items-start ps-8 gap-2">
                <p className="text-base rounded-md bg-plant text-buttonColor px-3">{item.role}</p>
