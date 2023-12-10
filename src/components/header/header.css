@@ -1,5 +1,5 @@
 .MuiBadge-anchorOriginTopRightRectangular {
-    background-color: yellow !important;
+    background-color: #ffcd1f !important;
   }
 .hover-animation:hover svg{
     transform: rotate(180deg);
