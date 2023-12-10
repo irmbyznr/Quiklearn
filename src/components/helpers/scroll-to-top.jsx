@@ -34,8 +34,8 @@ export const ScrollToTop = () => {
       style={{
         pathLength: scrollYProgress,
         position: "fixed",
-        bottom: isScrollFixed ? "20px" : "-100px", // Adjust the bottom value
-        right: "8px", // Adjust the right value
+        bottom: isScrollFixed ? "20px" : "-100px",
+        right: "8px",
         transition: "bottom 0.3s ease-in-out",
       }}
       className="border border-2 p-4 rounded-full text-buttonColor bg-transparent cursor-pointer border-buttonColor overflow-hidden"
