@@ -38,7 +38,7 @@ export const ScrollToTop = () => {
         right: "8px",
         transition: "bottom 0.3s ease-in-out",
       }}
-      className="border border-2 p-4 rounded-full text-buttonColor bg-transparent cursor-pointer border-buttonColor overflow-hidden"
+      className="border border-2 p-4 rounded-full text-buttonColor bg-transparent cursor-pointer border-buttonColor overflow-hidden z-50"
     >
       <IoArrowUp />
     </motion.div>
