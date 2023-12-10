@@ -1,7 +1,6 @@
-/* .MuiBadge-badge.MuiBadge-standard.MuiBadge-anchorOriginTopRight.MuiBadge-anchorOriginTopRightRectangular.MuiBadge-overlapRectangular.MuiBadge-colorSecondary.css-jcn4dz-MuiBadge-badge{
-    background-color: #FFCD1F !important;
-    color: black !important;
-} */
+.css-1o4n2ye {
+    background-color: yellow !important;
+  }
 .hover-animation:hover svg{
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
