@@ -79,7 +79,7 @@ export const SearchBar = () => {
             </button>
           </div>
 
-          <div className="flex lg:flex-1 hidden">
+          <div className="lg:flex lg:flex-1 hidden">
             {menus.map((menu) => (
               <Popover
                 key={menu.name}
