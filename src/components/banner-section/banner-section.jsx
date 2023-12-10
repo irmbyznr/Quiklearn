@@ -15,7 +15,7 @@ export const BannerSection = () => {
         <div className="text-center bg-opacity-100 ">
 
         <CustomButton title="Explore More Courses"/>
-        <img src={bannerShape} alt="" className='absolute top-0'/>
+        <img src={bannerShape} alt="" className='absolute left-0 top-0'/>
 
       </div>
         

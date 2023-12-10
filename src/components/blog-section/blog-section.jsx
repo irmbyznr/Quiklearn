@@ -1,5 +1,3 @@
-import React from 'react'
-
 import {info,image} from "../constants/index"
 import { BlogSectionSlider } from './blog-section-slider'
 

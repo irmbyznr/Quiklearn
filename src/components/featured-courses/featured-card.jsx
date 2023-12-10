@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 import "./featured-card.css";
 
 export const FeaturedCourses = () => {
-  //const [value, setValue] = useState();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const { featuredTitle1, featuredTitle2 } = info;
   const { underline } = image;

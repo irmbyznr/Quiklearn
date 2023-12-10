@@ -1,27 +1,23 @@
-import { image,contact  } from "../constants/index";
+import { image, contact } from "../constants/index";
 import { PiPhoneCallLight } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
 import { categories } from "../constants/index";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { Fragment} from "react";
-
-
+import { Fragment } from "react";
 
 export const TopBar = () => {
   const { logo } = image;
-  const { phone} = contact;
-
+  const { phone } = contact;
 
   return (
     <div className=" flex items-center justify-center p-6">
       <div>
-        <a href="#" >
+        <a href="#">
           <img className="h-auto max-w-ful " src={logo} alt="" />
         </a>
       </div>
       <div className="basis-1/2 relative mt-2 rounded-md hidden lg:flex">
-
         <div className="absolute inset-y-0 left-5 flex items-center">
           <Popover.Group className="lg:gap-x-12">
             <Popover className="relative">
@@ -67,7 +63,7 @@ export const TopBar = () => {
           name="price"
           id="price"
           className="block w-full rounded-full border-0 py-4 pl-40 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
-        placeholder="Find Your Courses..."
+          placeholder="Find Your Courses..."
         />
         <div className="absolute inset-y-0 right-2 flex items-center">
           <button className="flex gap-2 px-3 py-2 items-center bg-buttonColor rounded-3xl text-white text-lg hover:bg-purple">
@@ -76,7 +72,6 @@ export const TopBar = () => {
         </div>
       </div>
 
-          
       <div className="flex items-center">
         <div className="flex justify-center items-center hidden lg:flex">
           <span className="bg-white rounded-full  text-buttonColor p-4 ms-2 rounded border border-border">
@@ -89,10 +84,8 @@ export const TopBar = () => {
         </div>
         <div className="text-border px-4 hidden lg:flex">|</div>
 
-
-          
-<div className="gap-5 pt-5 lg:pt-0 hidden lg:flex pr-3">
-<a
+        <div className="gap-5 pt-5 lg:pt-0 hidden lg:flex pr-3">
+          <a
             href="#"
             className="flex-shrink-0 rounded-3xl px-6 py-3 rounded border border-border text-sm hover:bg-purple hover:text-white text-center"
           >
@@ -104,15 +97,7 @@ export const TopBar = () => {
           >
             Sign Up
           </a>
-
-</div>
-        
-
-
-
-      
-       
-
+        </div>
       </div>
     </div>
   );
