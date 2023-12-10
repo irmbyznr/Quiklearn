@@ -130,11 +130,11 @@ export const SearchBar = () => {
             ))}
           </div>
           <div className="lg:flex items-center gap-4 hidden pr-20 pt-2">
-            <Badge badgeContent={1} className="text-xl" color="primary">
+            <Badge badgeContent={1} className="text-xl" color="secondary">
               <BsHeart />
             </Badge>
             <span className="text-border ">|</span>
-            <Badge badgeContent={1} className="text-2xl" color="primary">
+            <Badge badgeContent={1} className="text-2xl" color="secondary">
               <LiaShoppingBagSolid />
             </Badge>
           </div>
