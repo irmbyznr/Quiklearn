@@ -1,5 +1,6 @@
-.css-fvc8ir-MuiBadge-badge{
+.css-106c1u2-MuiBadge-badge{
     background-color: #FFCD1F !important;
+    color: black !important;
 }
 .hover-animation:hover svg{
     transform: rotate(180deg);
