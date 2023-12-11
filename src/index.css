@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 @import "swiper/css";
 @import 'swiper/css/navigation';
 @import 'swiper/css/scrollbar';
@@ -9,6 +7,8 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    font-family: 'Outfit', sans-serif;
-}
+@layer base {
+    html {
+        font-family: 'Outfit', sans-serif;
+    }
+  }

@@ -51,7 +51,7 @@ export const FeaturedCourses = () => {
               <img src={underline} alt="" className="absolute right-10" />
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 justify-center items-center pt-8 pb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:gird-cols-5 gap-4 justify-center items-center pt-8 pb-8">
             <button
               onClick={() => handleCategoryClick(null)}
               className={
@@ -127,8 +127,8 @@ export const FeaturedCourses = () => {
                   </figcaption>
                 </figure>
               </div>
-              <div className="mt-3 mb-3 flex justify-between px-5 pb-5 pt-3">
-                <div>
+              <div className="mt-3 mb-3 px-5 pb-5 pt-3">
+                <div className="flex flex-col">
                   <div className="flex mb-3 gap-3">
                     <p className="mt-1 text-sm text-grey flex items-center">
                       <span className="text-md">
@@ -152,13 +152,13 @@ export const FeaturedCourses = () => {
                     </a>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{featured.name}</p>
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center gap-1">
                     <Rating
                       name="simple-controlled"
                       value={featured.star}
                     />
-                    <div className="flex flex-col lg:flex-row items-center gap-2">
-                    <strike>
+                    <div className="flex flex-col items-center gap-2">
+                    <strike >
                       {featured.discount}
                     </strike>
                     <p className="text-xl font-semibold text-gray-900">
